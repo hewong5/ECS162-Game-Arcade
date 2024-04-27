@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+h1, h6 {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 1vw;
+    margin: 0;
+}
+
+footer {
+    position: absolute;
+    height: 50px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
