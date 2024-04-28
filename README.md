@@ -8,3 +8,4 @@
 - [dice5.png](https://en.m.wikipedia.org/wiki/File:Dice-5-b.svg)
 - [dice6.png](https://en.m.wikipedia.org/wiki/File:Dice-6-b.svg)
 - [dice-roll.jpg](https://images.app.goo.gl/axDTYxGUmatxJLv39)
+- [wordle.jpg](https://images.app.goo.gl/izQypukypuzjjMpZ6)
