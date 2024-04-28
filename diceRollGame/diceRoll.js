@@ -8,7 +8,7 @@ function getDiceRoll() {
 
 function displayResult(num) {
     let result = 'You rolled a ' + num + '!';
-    document.querySelector('#display-text').innerHTML = result;
+    document.getElementById('display-text').innerHTML = result;
 
     let diceFace = 'dice' + num + '.png';
     document.getElementById('dice-img').src = diceFace;
