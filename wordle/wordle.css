@@ -1,0 +1,26 @@
+h2 {
+    text-align: center;
+}
+
+#game-container {
+    display: flex;
+    justify-content: center;
+}
+
+.board {
+    display: grid;
+    grid-template-rows: repeat(6, auto);
+    grid-template-columns: repeat(5, auto);
+}
+
+.cell {
+    display: grid;
+    width: 60px;
+    height: 60px;
+    border: 2px solid;
+    margin: 5px;
+    text-transform: uppercase;
+    place-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
