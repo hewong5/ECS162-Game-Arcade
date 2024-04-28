@@ -6,7 +6,7 @@ body {
 header {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    /*height: 100vh;*/
 }
 
 h1, h6 {
@@ -18,10 +18,24 @@ h1, h6 {
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     height: 50px;
     bottom: 0px;
     left: 0px;
     right: 0px;
     margin-bottom: 0px;
+}
+
+img {
+    max-width: 25%;
+    padding: 1vw;
+}
+
+figure {
+    display: inline-block;
+    text-align: center;
+}
+
+figcaption {
+    text-align: center;
 }
