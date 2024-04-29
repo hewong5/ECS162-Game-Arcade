@@ -47,11 +47,22 @@ function isLetter(key) {
 }
 
 function addLetter(key) {
-    if(currCol > 4) {
+    if(state[currRow][currCol] === '') {
+        state[currRow][currCol] = key;
+    }
+
+    if(currCol === 4) {
+        return;
+    }    
+    currCol++;
+}
+
+function deleteLetter() {
+    state[currRow][currCol] = '';
+    if(currCol === 0) {
         return;
     }
-    state[currRow][currCol] = key;
-    currCol++;
+    currCol--;
 }
 
 function keyEvents() {
@@ -62,7 +73,7 @@ function keyEvents() {
         }
 
         if(key == 'Backspace') {
-            deleteLetter(key);
+            deleteLetter();
         }
 
         if(isLetter(key)) {
