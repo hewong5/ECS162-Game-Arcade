@@ -73,7 +73,6 @@ function removeChar(string, index) {
 function checkCorrect() {
     let numCorrectChars = 0;
     let copyTargetWord = targetWord;
-    let inputWord = state[currRow].join('');
     let correctIndices = [];
     //mark green cells and obvious gray cells(letters not in the word)
     for(let i = 0; i < targetWord.length; i++) {
