@@ -117,11 +117,6 @@ function checkCorrect() {
     return numCorrectChars;
 }
 
-function win() {
-    //document.body.removeEventListener('keydown', handleKeyDown);
-    //document.getElementById('heading-text').innerHTML = 'You Win!';
-}
-
 function keyEvents() {
     document.body.addEventListener('keydown', function handleKeyDown(k) {
         let key = k.key;
