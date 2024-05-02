@@ -106,6 +106,9 @@ function checkCorrect() {
     //mark other cells gray
     for(let i = 0; i < state[currRow].length; i++) {
         let cell = document.getElementById(`cell${currRow}${i}`);
+        if(cell.classList.contains('wrong') || cell.classList.contains('right')) {
+            continue;
+        }
         if(copyTargetWord.includes(state[currRow][i])) {
             cell.classList.add('almost-right');
             copyTargetWord = removeChar(copyTargetWord, copyTargetWord.indexOf(state[currRow][i]));
