@@ -1,3 +1,5 @@
+import { wordsList } from "./wordleList.js";
+
 let currRow = 0;
 let currCol = 0;
 let state = [
@@ -8,7 +10,7 @@ let state = [
     ['','','','',''],
     ['','','','','']
 ];
-let targetWord = "hello";
+let targetWord = "";
 
 function drawCell(container, row, col) {
     let cell = document.createElement('div')
@@ -117,11 +119,21 @@ function checkCorrect() {
     return numCorrectChars;
 }
 
+function isRealWord(word) {
+    return wordsList.includes(word);
+}
+
 function handleKeyEvents() {
     document.body.addEventListener('keydown', function handleKeyDown(k) {
         let key = k.key;
         if(key == 'Enter') {
             if(currCol != 4 || state[currRow][currCol] === '') {
+                return;
+            }
+
+            let inputWord = state[currRow].join("");
+            if(!isRealWord(inputWord)) {
+                document.getElementById('heading-text').innerHTML = 'Not a Valid Word';
                 return;
             }
 
@@ -137,6 +149,10 @@ function handleKeyEvents() {
 
         if(key == 'Backspace') {
             deleteLetter();
+            let heading = document.getElementById('heading-text');
+            if(heading.innerHTML === 'Not a Valid Word') {
+                heading.innerHTML = 'Guess the Word';
+            }
         }
 
         if(isLetter(key)) {
@@ -148,6 +164,9 @@ function handleKeyEvents() {
 }
 
 function startGame() {
+    let num = Math.floor(Math.random() * wordsList.length);
+    targetWord = wordsList[num];
+    console.log(targetWord);
     initializeBoard();
     handleKeyEvents();
 }
