@@ -140,7 +140,7 @@ function handleKeyEvents() {
         }
 
         if(isLetter(key)) {
-            addLetter(key);
+            addLetter(key.toLowerCase());
         }
         updateBoard()
     });
