@@ -117,7 +117,7 @@ function checkCorrect() {
     return numCorrectChars;
 }
 
-function keyEvents() {
+function handleKeyEvents() {
     document.body.addEventListener('keydown', function handleKeyDown(k) {
         let key = k.key;
         if(key == 'Enter') {
@@ -147,5 +147,9 @@ function keyEvents() {
 
 }
 
-initializeBoard();
-keyEvents();
+function startGame() {
+    initializeBoard();
+    handleKeyEvents();
+}
+
+startGame();
