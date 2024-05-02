@@ -113,16 +113,31 @@ function checkCorrect() {
     
     currRow++;
     currCol = 0;
+
+    return numCorrectChars;
+}
+
+function win() {
+    //document.body.removeEventListener('keydown', handleKeyDown);
+    //document.getElementById('heading-text').innerHTML = 'You Win!';
 }
 
 function keyEvents() {
-    document.body.onkeydown = (k) => {
+    document.body.addEventListener('keydown', function handleKeyDown(k) {
         let key = k.key;
         if(key == 'Enter') {
-            if(currCol != 4) {
+            if(currCol != 4 || state[currRow][currCol] === '') {
                 return;
             }
-            checkCorrect();
+
+            let numCorrectChars = checkCorrect();
+            if(numCorrectChars === 5) {
+                document.body.removeEventListener('keydown', handleKeyDown);
+                document.getElementById('heading-text').innerHTML = 'You Win!';
+            }else if(currRow === 6) {
+                document.body.removeEventListener('keydown', handleKeyDown);
+                document.getElementById('heading-text').innerHTML = `You Lose. The word was \'${targetWord}\'.`;
+            }
         }
 
         if(key == 'Backspace') {
@@ -133,7 +148,7 @@ function keyEvents() {
             addLetter(key);
         }
         updateBoard()
-    };
+    });
 
 }
 
