@@ -166,7 +166,7 @@ function handleKeyEvents() {
 function startGame() {
     let num = Math.floor(Math.random() * wordsList.length);
     targetWord = wordsList[num];
-    console.log(targetWord);
+    
     initializeBoard();
     handleKeyEvents();
 }
