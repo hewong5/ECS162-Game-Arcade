@@ -8,6 +8,7 @@ let state = [
     ['','','','',''],
     ['','','','','']
 ];
+let targetWord = "hello";
 
 function drawCell(container, row, col) {
     let cell = document.createElement('div')
@@ -65,11 +66,67 @@ function deleteLetter() {
     currCol--;
 }
 
+function removeChar(string, index) {
+    return string.substr(0, index) + string.substr(index+1, string.length);
+}
+
+function checkCorrect() {
+    let numCorrectChars = 0;
+    let copyTargetWord = targetWord;
+    let inputWord = state[currRow].join('');
+    let correctIndices = [];
+    //mark green cells and obvious gray cells(letters not in the word)
+    for(let i = 0; i < targetWord.length; i++) {
+        if(targetWord[i] === state[currRow][i]) {
+            correctIndices.push(i);
+            let cell = document.getElementById(`cell${currRow}${i}`);
+            cell.classList.add('right');
+            numCorrectChars++;
+        }
+        if(!targetWord.includes(state[currRow][i])) {
+            let cell = document.getElementById(`cell${currRow}${i}`);
+            cell.classList.add('wrong');
+        }
+    }
+    //for(let i = 0; i < state[currRow].length; i++) {
+    //    if(correctIndices.includes(i)) {
+    //        continue;
+    //    }
+    //    for(let j = 0;)
+    //}
+    //remove correctly guessed letters from copyTargetWord
+    for(let i = 0; i < correctIndices.length; i++) {
+        copyTargetWord = removeChar(copyTargetWord, correctIndices[i])
+        for(let j = i+1; j < correctIndices.length; j++) {
+            correctIndices[j] = correctIndices[j] - 1;
+        }
+    }
+    console.log(copyTargetWord)
+    //mark yellow cells and remove marked letters from copyTargetWord
+    //mark other cells gray
+    for(let i = 0; i < state[currRow].length; i++) {
+        let cell = document.getElementById(`cell${currRow}${i}`);
+        if(copyTargetWord.includes(state[currRow][i])) {
+            cell.classList.add('almost-right');
+            copyTargetWord = removeChar(copyTargetWord, copyTargetWord.indexOf(state[currRow][i]));
+            console.log(copyTargetWord)
+        }else {
+            cell.classList.add('wrong');
+        }
+    }
+    console.log(copyTargetWord);
+    currRow++;
+    currCol = 0;
+}
+
 function keyEvents() {
     document.body.onkeydown = (k) => {
         let key = k.key;
         if(key == 'Enter') {
-
+            if(currCol != 4) {
+                return;
+            }
+            checkCorrect();
         }
 
         if(key == 'Backspace') {
