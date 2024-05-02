@@ -9,3 +9,4 @@
 - [dice6.png](https://en.m.wikipedia.org/wiki/File:Dice-6-b.svg)
 - [dice-roll.jpg](https://images.app.goo.gl/axDTYxGUmatxJLv39)
 - [wordle.jpg](https://images.app.goo.gl/izQypukypuzjjMpZ6)
+- [wordleList](https://gist.github.com/slushman/34e60d6bc479ac8fc698df8c226e4264)
