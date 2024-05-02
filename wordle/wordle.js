@@ -88,12 +88,7 @@ function checkCorrect() {
             cell.classList.add('wrong');
         }
     }
-    //for(let i = 0; i < state[currRow].length; i++) {
-    //    if(correctIndices.includes(i)) {
-    //        continue;
-    //    }
-    //    for(let j = 0;)
-    //}
+    
     //remove correctly guessed letters from copyTargetWord
     for(let i = 0; i < correctIndices.length; i++) {
         copyTargetWord = removeChar(copyTargetWord, correctIndices[i])
@@ -101,7 +96,7 @@ function checkCorrect() {
             correctIndices[j] = correctIndices[j] - 1;
         }
     }
-    console.log(copyTargetWord)
+    
     //mark yellow cells and remove marked letters from copyTargetWord
     //mark other cells gray
     for(let i = 0; i < state[currRow].length; i++) {
@@ -112,12 +107,11 @@ function checkCorrect() {
         if(copyTargetWord.includes(state[currRow][i])) {
             cell.classList.add('almost-right');
             copyTargetWord = removeChar(copyTargetWord, copyTargetWord.indexOf(state[currRow][i]));
-            console.log(copyTargetWord)
         }else {
             cell.classList.add('wrong');
         }
     }
-    console.log(copyTargetWord);
+    
     currRow++;
     currCol = 0;
 }
