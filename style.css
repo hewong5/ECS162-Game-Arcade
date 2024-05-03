@@ -48,6 +48,13 @@ figcaption {
     flex-wrap: wrap;
 }
 
+.container > div {
+    display: flex;
+    flex: 33%;
+    justify-content: center;
+    align-items: center;
+}
+
 a {
     text-decoration: none;
 }

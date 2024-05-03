@@ -11,6 +11,7 @@ I chose an open source Hangman game with an MIT license. The orignal author can 
 - [dice4.png](https://en.m.wikipedia.org/wiki/File:Dice-4-b.svg)
 - [dice5.png](https://en.m.wikipedia.org/wiki/File:Dice-5-b.svg)
 - [dice6.png](https://en.m.wikipedia.org/wiki/File:Dice-6-b.svg)
+- [dice-background.jpg](https://images.app.goo.gl/qBVLjA65dYcMQatm9)
 - [dice-roll.jpg](https://images.app.goo.gl/axDTYxGUmatxJLv39)
 
 ### Hangman
