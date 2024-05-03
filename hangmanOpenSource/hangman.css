@@ -8,10 +8,6 @@ h6 {
     font-family: 'Times New Roman', Times, serif;
 }
 
-/* #hangmanPic {
-    width: 300px;
-} */
-
 body {
     margin: 0;
     padding: 0;
@@ -44,22 +40,4 @@ img {
     width: 250px;
     height: 250px;
     padding: 1vw;
-    /*object-fit: scale-down;*/
 }
-
-/* figure {
-    display: inline-block;
-    text-align: center;
-}
-
-figcaption {
-    text-align: center;
-} */
-
-/* .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
- */
