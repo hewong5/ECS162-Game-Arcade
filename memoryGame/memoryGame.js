@@ -13,6 +13,8 @@ let cardsList = [
 ];
 
 let cardsShuffled;
+let cardClicked1 = null;
+let cardClicked2 = null;
 let numRows = 5;
 let numCols = 4;
 
@@ -32,6 +34,7 @@ function drawCell(board, row, col) {
     cell.id = `cell${row}${col}`;
     cell.src = cardsShuffled.pop();
     board.appendChild(cell);
+    cell.addEventListener('click', handleCardClick);
     return cell.src;
 }
 
@@ -59,6 +62,35 @@ function hideCards() {
             let card = document.getElementById(`cell${i}${j}`);
             card.src = 'pokeball.webp';
         }
+    }
+}
+
+function checkMatch() {
+    if(cardClicked1.src != cardClicked2.src) {
+        cardClicked1.src = 'pokeball.webp';
+        cardClicked2.src = 'pokeball.webp';
+    }
+    cardClicked1 = null;
+    cardClicked2 = null;
+}
+
+function handleCardClick() {
+    if(!this.src.includes('pokeball')) {
+        return;
+    }
+
+    if(cardClicked1 === null) {
+        cardClicked1 = this;
+        let row = parseInt(this.id.slice(-2,-1));
+        let col = parseInt(this.id.slice(-1));
+        cardClicked1.src = boardState[row][col];
+    }else if(cardClicked2 === null && cardClicked1 != null) {
+        cardClicked2 = this;
+        let row = parseInt(this.id.slice(-2,-1));
+        let col = parseInt(this.id.slice(-1));
+        cardClicked2.src = boardState[row][col];
+
+        setTimeout(checkMatch, 1000);
     }
 }
 
