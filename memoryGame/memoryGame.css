@@ -1,3 +1,23 @@
 h2 {
     text-align: center;
 }
+
+#game-container {
+    display: flex;
+    justify-content: center;
+}
+
+.board {
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: repeat(4, auto);
+}
+
+.cell {
+    display: grid;
+    width: 60px;
+    height: 60px;
+    border: 2px solid;
+    margin: 5px;
+    aspect-ratio: 1 / 1;
+}
