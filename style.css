@@ -1,7 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(151, 241, 241);
+    background-image: url('sky-background.avif');
+    background-size: cover;
 }
 
 header {
@@ -35,6 +36,7 @@ img {
 figure {
     display: inline-block;
     text-align: center;
+    font-weight: bold;
 }
 
 figcaption {
