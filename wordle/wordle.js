@@ -50,22 +50,30 @@ function isLetter(key) {
 }
 
 function addLetter(key) {
-    if(state[currRow][currCol] === '') {
-        state[currRow][currCol] = key;
+    if(currCol === 5) {
+        return; 
     }
-
-    if(currCol === 4) {
+    state[currRow][currCol] = key;
+/*     if(currCol === 4) {
         return;
-    }    
+    }   */  
     currCol++;
 }
 
 function deleteLetter() {
-    state[currRow][currCol] = '';
+    console.log("before: currCol  = " + currCol);
+
+/*     if(state[currRow][currCol] === ''){
+        state[currRow][currCol-1] = '';
+    }else {
+        state[currRow][currCol] = '';
+    } */
     if(currCol === 0) {
         return;
     }
+    state[currRow][currCol-1] = '';
     currCol--;
+    console.log("after: currCol  = " + currCol);
 }
 
 function removeChar(string, index) {
@@ -126,8 +134,8 @@ function isRealWord(word) {
 function handleKeyEvents() {
     document.body.addEventListener('keydown', function handleKeyDown(k) {
         let key = k.key;
-        if(key == 'Enter') {
-            if(currCol != 4 || state[currRow][currCol] === '') {
+        if(key === 'Enter') {
+            if(currCol != 5 || state[currRow][currCol] === '') {
                 return;
             }
 
@@ -147,12 +155,15 @@ function handleKeyEvents() {
             }
         }
 
-        if(key == 'Backspace') {
-            deleteLetter();
-            let heading = document.getElementById('heading-text');
-            if(heading.innerHTML === 'Not a Valid Word') {
-                heading.innerHTML = 'Guess the Word';
+        if(key === 'Backspace') {
+            if(currCol === 5) {
+                let heading = document.getElementById('heading-text');
+                if(heading.innerHTML === 'Not a Valid Word') {
+                    heading.innerHTML = 'Guess the Word';
+                }
             }
+
+            deleteLetter();
         }
 
         if(isLetter(key)) {
