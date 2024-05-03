@@ -1,0 +1,65 @@
+h1 {
+    font-size: 32px;
+    font-family: 'Times New Roman', Times, serif
+}
+
+h6 {
+    font-size: 10.7px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* #hangmanPic {
+    width: 300px;
+} */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(151, 241, 241);
+}
+
+header {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h6 {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 1vw;
+    margin: 0;
+    font-weight: bold;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+    padding: 1vw;
+    /*object-fit: scale-down;*/
+}
+
+/* figure {
+    display: inline-block;
+    text-align: center;
+}
+
+figcaption {
+    text-align: center;
+} */
+
+/* .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+ */

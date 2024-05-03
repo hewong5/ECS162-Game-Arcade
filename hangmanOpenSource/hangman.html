@@ -7,23 +7,31 @@
 
   <!-- Bootstrap 4 CDN -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <!--link rel="stylesheet" href="../style.css"-->
+  <link rel="stylesheet" href="hangman.css">
 
   <title>Hangman</title>
 </head>
 <body>
-<div class="container">
-  <h1 class="text-center">Hangman</h1>
-  <div class="float-right">Wrong Guesses: <span id='mistakes'>0</span> of <span id='maxWrong'></span></div>
-  <div class="text-center">
-    <img id='hangmanPic' src="./images/0.jpg" alt="">
-    <p>Guess the Programming Language:</p>
-    <p id="wordSpotlight">The word to be guessed goes here</p>
-    <div id="keyboard"></div>
-    <button class="btn btn-info" onClick="reset()">Reset</button>
-  </div> 
-</div>
+    <header>
+        <h1><a href="../index.html">Game Arcade</a></h1>
+    </header>
 
-<script src='hangman.js'></script>
+    <main>
+        <div class="container">
+            <div class="float-right">Wrong Guesses: <span id='mistakes'>0</span> of <span id='maxWrong'></span></div>
+            <div class="text-center">
+                <img id='hangmanPic' src="./images/0.jpg" alt="">
+                <p>Guess the Programming Language:</p>
+                <p id="wordSpotlight">The word to be guessed goes here</p>
+                <div id="keyboard"></div>
+                <button class="btn btn-info" onClick="reset()">Reset</button>
+            </div> 
+        </div>
+    </main>
+
+    <footer>
+        <h6>Copyright &copy; 2024 Game Arcade</h6>
+    </footer>
+    <script src='hangman.js'></script>
 </body>
 </html>
