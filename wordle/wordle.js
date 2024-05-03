@@ -54,26 +54,15 @@ function addLetter(key) {
         return; 
     }
     state[currRow][currCol] = key;
-/*     if(currCol === 4) {
-        return;
-    }   */  
     currCol++;
 }
 
 function deleteLetter() {
-    console.log("before: currCol  = " + currCol);
-
-/*     if(state[currRow][currCol] === ''){
-        state[currRow][currCol-1] = '';
-    }else {
-        state[currRow][currCol] = '';
-    } */
     if(currCol === 0) {
         return;
     }
     state[currRow][currCol-1] = '';
     currCol--;
-    console.log("after: currCol  = " + currCol);
 }
 
 function removeChar(string, index) {
