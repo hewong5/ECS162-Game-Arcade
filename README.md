@@ -1,7 +1,7 @@
 # ECS162-Game-Arcade
 
 ## Open Source Game
-I chose an open source Hangman game with an MIT license. The original author can be found here: https://github.com/simonjsuh/Vanilla-Javascript-Hangman-Game . I refactored the code by renaming some functions and moving around code to make it more readable. I also decoupled some Javascript from the hangman.html file and moved it into hangman.js so that the Javascript and HTML are separate. Additionally, I added CSS stylings to make the game fit with my website.
+I chose an open source Hangman game with an MIT license. The original author can be found here: https://github.com/simonjsuh/Vanilla-Javascript-Hangman-Game . I refactored the code by renaming some functions and moving around code to make it more readable. I also decoupled some Javascript from the hangman.html file and moved it into hangman.js so that the Javascript and HTML are separate. For each major function, I also included comments about what they each do. Additionally, I added CSS stylings to make the game fit with my website.
 
 ## Image Credits
 

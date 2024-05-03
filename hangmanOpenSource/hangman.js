@@ -103,9 +103,14 @@ function reset() {
   generateButtons();
 }
 
-document.getElementById('maxWrong').innerHTML = maxWrong;
-document.getElementById('resetButton').addEventListener('click', reset);
+//start the game
+function startGame() {
+  document.getElementById('maxWrong').innerHTML = maxWrong;
+  document.getElementById('resetButton').addEventListener('click', reset);
 
-getRandomWord();
-generateButtons();
-updateGuessedWord();
+  getRandomWord();
+  generateButtons();
+  updateGuessedWord();
+}
+
+startGame();
