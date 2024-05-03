@@ -47,3 +47,15 @@ figcaption {
     align-items: center;
     flex-wrap: wrap;
 }
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(14, 96, 219);
+}
+
+a:hover {
+    text-decoration: underline;
+}
