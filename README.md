@@ -1,5 +1,8 @@
 # ECS162-Game-Arcade
 
+## Open Source Game
+I chose an open source Hangman game with an MIT license. The orignal author can be found here: https://github.com/simonjsuh/Vanilla-Javascript-Hangman-Game . I refactored the code by renaming some functions and moving around code to make it more readable. I also decoupled some Javascript from the hangman.html file and moved it into hangman.js so that the Javascript and HTML are separate. Additionally, I added CSS stylings to make the game fit with my website.
+
 ## Image Credits
 ### Dice Game
 - [dice1.png](https://en.m.wikipedia.org/wiki/File:Dice-1-b.svg)
@@ -9,6 +12,9 @@
 - [dice5.png](https://en.m.wikipedia.org/wiki/File:Dice-5-b.svg)
 - [dice6.png](https://en.m.wikipedia.org/wiki/File:Dice-6-b.svg)
 - [dice-roll.jpg](https://images.app.goo.gl/axDTYxGUmatxJLv39)
+
+### Hangman
+- [hangman-logo.jpg](https://images.app.goo.gl/Ygi4ubVAGY6Dm6ub8)
 
 ### Memory Game
 - [blastoise.png](https://images.app.goo.gl/J1TR7xQ4qfQFQhMs7)
